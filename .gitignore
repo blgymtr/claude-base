@@ -1,0 +1,12 @@
+# Local cache, settings and backups: personal data, never committed
+# Yerel önbellek, ayarlar, yedekler: kişisel veri, depoya girmez
+veri/
+demo/ev/
+demo/veri/
+demo/*.log
+__pycache__/
+*.pyc
+# Build output: rebuilt with paketle.py / Derleme çıktısı
+*.exe
+build/
+*.spec

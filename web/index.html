@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="tr" data-tema="koyu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claude Base</title>
+<link rel="icon" type="image/svg+xml" sizes="16x16 32x32" href="logo-kucuk.svg">
+<link rel="icon" type="image/svg+xml" sizes="any" href="logo.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="ust">
+  <div class="ust-satir">
+    <div class="logo">
+      <img class="logo-isaret" src="logo-kucuk.svg" alt="">
+      <div>
+        <h1 class="baslik-font">Claude Base</h1>
+        <div class="logo-alt" id="logoAlt">Claude Code etkinliği · yerel</div>
+      </div>
+    </div>
+    <nav class="sekmeler" id="sekmeler">
+      <button class="sekme aktif" data-sekme="genel">Genel</button>
+      <button class="sekme" data-sekme="canli"><span class="canli-isaret"></span>Canlı</button>
+      <button class="sekme" data-sekme="projeler">Projeler</button>
+      <button class="sekme" data-sekme="oturumlar">Oturumlar</button>
+      <button class="sekme" data-sekme="gecmis">Geçmiş</button>
+      <button class="sekme" data-sekme="bant">Bant</button>
+      <button class="sekme" data-sekme="ajanlar">Ajanlar</button>
+      <button class="sekme" data-sekme="oneriler">Öneriler<span class="rozet gizli" id="oneriRozet"></span></button>
+    </nav>
+    <div class="sag-kontroller">
+      <div class="anahtar-grup" id="donem">
+        <button data-gun="1">1 gün</button>
+        <button data-gun="7">7 gün</button>
+        <button data-gun="30" class="aktif">30 gün</button>
+        <button data-gun="0">Tümü</button>
+      </div>
+      <div class="anahtar-grup" id="tema">
+        <button data-tema="acik">Açık</button>
+        <button data-tema="koyu" class="aktif">Koyu</button>
+      </div>
+    </div>
+  </div>
+  <div class="durum-satiri">
+    <span><span class="nokta" id="taramaNokta"></span><span id="taramaMetin">hazır</span></span>
+    <span id="acikSayac"></span>
+    <span class="cok-soluk">veri bilgisayarından çıkmaz</span>
+    <span style="margin-left:auto; display:flex; gap:8px">
+      <button class="kucuk-dugme" id="yenileDugme" title="Kayıtları yeniden tara">↻ Tara</button>
+      <button class="kucuk-dugme" id="obsidianDugme" title="Son 7 günün özetini Obsidian kasasına yaz">Obsidian'a yaz</button>
+      <button class="kucuk-dugme" id="kapatDugme" title="Claude Base'i kapat">Kapat</button>
+    </span>
+  </div>
+</header>
+
+<main>
+  <section id="s-genel" class="sayfa"></section>
+  <section id="s-canli" class="sayfa gizli"></section>
+  <section id="s-projeler" class="sayfa gizli"></section>
+  <section id="s-oturumlar" class="sayfa gizli"></section>
+  <section id="s-gecmis" class="sayfa gizli"></section>
+  <section id="s-bant" class="sayfa gizli"></section>
+  <section id="s-ajanlar" class="sayfa gizli"></section>
+  <section id="s-oneriler" class="sayfa gizli"></section>
+</main>
+<div class="ipucu gizli" id="ipucu"></div>
+<script src="canli.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
